@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class ClientRunner {
+public class HyruleTemp {
 
 	public static void main(String[] args)throws IOException {
 		// TODO Auto-generated method stub
