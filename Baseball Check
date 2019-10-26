@@ -1,0 +1,61 @@
+import java.util.*;
+import java.io.*;
+
+public class BaseballCheck {
+    
+    public static void main(String[] args) throws IOException {
+        boolean swing = true; boolean hit = true; boolean ball = false; int ballcount = 1; boolean foul = false; int strike = 1; boolean fair = true; boolean homerun = true;boolean caught = false;
+        if(swing){
+            if(hit){
+                if(caught){
+                    System.out.println("Out");
+                }
+                else if(!caught){
+                    if(fair){
+                        if(homerun){
+                            System.out.println("Homerun!!!");
+                        }
+                        else{
+                            System.out.println("Ball is in play.");
+                        }
+                    }
+                    else if(foul){
+                        if(strike < 2){
+                        System.out.println("Strike");
+                       }
+                        else if(strike == 2){
+                        System.out.println("Foul ball. No strike.");
+                       }
+                    }
+                }
+                
+            }
+            else if(!hit){
+                if(strike == 3){
+                    System.out.println("Strikeout");
+                }
+                else if(strike != 3){
+                    System.out.println("Strike");
+                }
+            }
+        }
+        else if(!swing){
+            if(ball){
+                if(ballcount == 4){
+                    System.out.println("Walk");
+                }
+                else if(ballcount != 4){
+                    System.out.println("Ball");
+                }
+            }
+            else if(!ball){
+                if(strike == 3){
+                    System.out.println("Strikeout");
+                }
+                else if(strike != 3){
+                    System.out.println("Strike");
+                }
+            }
+        }
+    }
+}
